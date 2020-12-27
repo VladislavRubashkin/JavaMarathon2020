@@ -12,7 +12,7 @@ public class Task3 {
         }
         while (a < b){
             a++;
-            if (a % 5 == 0 && a % 10 != 0){
+            if (a % 5 == 0 && a % 10 != 0 && a < b){
                 System.out.print(a + " ");
             }
         }
