@@ -3,50 +3,66 @@ package day4;
 import java.util.Scanner;
 
 public class Task1 {
+    /*
+    1. С клавиатуры вводится число n - размер массива. Необходимо создать массив указанного размера и заполнить
+    его случайными числами от 0 до 10. Затем вывести содержимое массива в консоль, а также вывести в консоль
+    информацию о:
+    а) Длине массива
+    б) Количестве чисел больше 8
+    в) Количестве чисел равных 1
+    г) Количестве четных чисел
+    д) Количестве нечетных чисел
+    е) Сумме всех элементов массива
+
+    Пример:
+    Введено число 10. Сгенерирован следующий массив:
+    [4, 8, 4, 9, 5, 2, 2, 3, 3, 6]
+    Информация о массиве:
+    Длина массива: 10
+    Количество чисел больше 8: 1
+    Количество чисел равных 1: 0
+    Количество четных чисел: 6
+    Количество нечетных чисел: 4
+    Сумма всех элементов массива: 46
+     */
     public static void main(String[] args) {
-        int count = 0;
-        int wan = 0;
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        int count8 = 0;
+        int count1 = 0;
         int chet = 0;
         int neChet = 0;
         int sum = 0;
-        Scanner scanner = new Scanner(System.in);
-        int size = scanner.nextInt();
-        int[] array = new int[size];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() + 10) * 10;
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = ((int)(Math.random()*10));
+            System.out.print(arr[i] + " ");
         }
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(i + " ");
-        }
-        for (int j : array) {
+        System.out.println();
+        for (int j : arr) {
             if (j > 8) {
-                count++;
+                count8++;
             }
-        }
-        for (int i : array) {
-            if (array[i] == 1){
-                wan++;
+            if (j == 1) {
+                count1++;
             }
-        }
-        for (int i : array) {
-            if (array[i] % 2 == 0){
+            if (j % 2 == 0) {
                 chet++;
             }
-        }
-        for (int i : array) {
-            if (array[i] % 2 != 0){
+            if (j % 2 != 0) {
                 neChet++;
             }
         }
-        for (int i = 0; i < array.length; i++) {
+        for (int i : arr) {
             sum += i;
         }
-        System.out.println();
-        System.out.println("Длинна массива: " + size);
-        System.out.println("Количество чисел больше 8: " + count);
-        System.out.println("Количество чисел, равных 1: " + wan);
+        System.out.println("Информация о массиве:");
+        System.out.println("Длина массива: " + n);
+        System.out.println("Количество чисел больше 8: " + count8);
+        System.out.println("Количество чисел равных 1: " + count1);
         System.out.println("Количество четных чисел: " + chet);
-        System.out.println("Количество не четных чисел: " + neChet);
-        System.out.println("Сумма массива равна: " + sum);
+        System.out.println("Количество нечетных чисел: " + neChet);
+        System.out.println("Сумма всех элементов массива: " + sum);
     }
 }
