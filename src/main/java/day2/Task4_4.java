@@ -14,5 +14,13 @@ public class Task4_4 {
         } else {
             System.out.println(y = 420.0);
         }
+//        int i = 1;
+//        i = i++ + (( i > 2 )? i++: (i++ * i++)) + i++ ;
+//        System.out.println(i);// 11
+//
+//        i = 2;
+//        i = i++ + (( i > 2 )? i++: (i++ * i++)) + i++ ;
+//        System.out.println(i); // 9
     }
+
 }
