@@ -7,12 +7,12 @@ public class Task1 {
     Вывести в консоль значение каждого из полей, используя get методы.
     Созданный вами класс должен отвечать принципам инкапсуляции.
      */
-    public static void main(String[] args) {
-        Car car = new Car();
-        car.setYear(1980);
-        car.setColor("Black");
-        car.setModel("BMW");
-        System.out.println("Год выпуска: " + car.getYear() + " Цвет: " + car.getColor() + " Модель: " + car.getModel());
-    }
+//    public static void main(String[] args) {
+//        Car car = new Car();
+//        car.setYear(1980);
+//        car.setColor("Black");
+//        car.setModel("BMW");
+//        System.out.println("Год выпуска: " + car.getYear() + " Цвет: " + car.getColor() + " Модель: " + car.getModel());
+//    }
 }
 
