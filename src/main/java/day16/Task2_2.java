@@ -51,7 +51,7 @@ public class Task2_2 {
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден!");
         }
-        
+
         printResult(file2);
     }
 
